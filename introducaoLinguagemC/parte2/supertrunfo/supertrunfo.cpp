@@ -3,6 +3,7 @@
 int main(){
     char estado, estado2, codigoCarta, codigoCarta2, nomeCidade, nomeCidade2;
     int populacao, populacao2, pontosTuristicos, pontosTuristicos2;
+    int escolhaMenu;
     float area, area2, pib, pib2;
 
 // PRIMEIRA CARTA    
@@ -33,7 +34,7 @@ int main(){
     printf("Densidade populacional: %.2f\n", densidadePopulacional);
 
     float pibPerCapita = pib / populacao;
-    printf("Densidade populacional: %.2f\n", pibPerCapita);
+    printf("PIB per capita: %.2f\n", pibPerCapita);
 
 // SEGUNDA CARTA    
     printf("Cadastre a segunda carta!\n");
@@ -62,17 +63,51 @@ int main(){
     printf("Densidade populacional: %.2f\n", densidadePopulacional2);
 
     float pibPerCapita2 = pib2 / populacao2;
-    printf("Densidade populacional: %.2f\n", pibPerCapita2);
+    printf("PIB per capita: %.2f\n", pibPerCapita2);
 
-    printf("Vamos comparar o atributo População das duas cartas Inseridas!\n");
-    printf("A primeira carta tem uma população de %d Habitantes, enquanto que a segunda carta tem %d habitantes. \n", populacao, populacao2);
+    // printf("Vamos comparar o atributo População das duas cartas Inseridas!\n");
+    // printf("A primeira carta tem uma população de %d Habitantes, enquanto que a segunda carta tem %d habitantes. \n", populacao, populacao2);
     
-    if(populacao > populacao2){
-        printf("A carta vencedora é a primeira");
-    } else {
-        printf("A Carta vencedora é a segunda");
+    // if(populacao > populacao2){
+    //     printf("A carta vencedora é a primeira");
+    // } else {
+    //     printf("A Carta vencedora é a segunda");
+    // }
+
+
+
+    printf("Escolha qual atributo vc quer comparar: \n");
+    printf("1. População  \n");
+    printf("2. Área \n");
+    printf("3. PIB \n");
+    printf("4. Densidade Demográfica \n");
+    scanf(" %d", escolhaMenu);
+
+    switch (escolhaMenu)
+    {
+        case 1:
+            printf("Atributo escolhido: População\n");
+            break;
+        case 2:
+            printf("Atributo escolhido: Área\n");
+            break;
+        case 3:
+            printf("Atributo escolhido: PIB\n");
+            break;
+        case 4: 
+            printf("Densidade Demográfica\n");
+            break;    
+        default:
+            printf("Opção Inválida!");
+            break;
     }
 
-
+    if ((populacao > populacao2) || (area > area2) || (pib > pib2) || (densidadePopulacional < densidadePopulacional2))
+    {
+        printf("Carta 1 VENCEU");
+    } else {
+        printf("Carta 2 VENCEU");
+    }
+    
 
 }
