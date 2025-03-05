@@ -65,15 +65,6 @@ int main(){
     float pibPerCapita2 = pib2 / populacao2;
     printf("PIB per capita: %.2f\n", pibPerCapita2);
 
-    // printf("Vamos comparar o atributo População das duas cartas Inseridas!\n");
-    // printf("A primeira carta tem uma população de %d Habitantes, enquanto que a segunda carta tem %d habitantes. \n", populacao, populacao2);
-    
-    // if(populacao > populacao2){
-    //     printf("A carta vencedora é a primeira");
-    // } else {
-    //     printf("A Carta vencedora é a segunda");
-    // }
-
 
 
     printf("Escolha qual atributo vc quer comparar: \n");
@@ -81,7 +72,7 @@ int main(){
     printf("2. Área \n");
     printf("3. PIB \n");
     printf("4. Densidade Demográfica \n");
-    scanf(" %d", escolhaMenu);
+    scanf(" %d", &escolhaMenu);
 
     switch (escolhaMenu)
     {
